@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Organite.Domain.Repositories;
 using Organite.Infrastructure.Data;
+using Organite.Infrastructure.Repositories;
 using Organite.Infrastructure.Seeders;
 
 namespace Organite.Infrastructure.Extensions;
@@ -14,5 +16,6 @@ public static class ServiceCollectionExtensions
         services.AddDbContext<OrganiteDBContext>(options => options.UseSqlServer(connectionString));
 
         services.AddScoped<INotesSeeder, NotesSeeder>();
+        services.AddScoped<INotesRepository, NotesRepository>();
     }
 }

@@ -23,7 +23,6 @@ internal class NotesSeeder(OrganiteDBContext dbContext) : INotesSeeder
         List<Note> notes = [
                 new Note
                 {
-                    Id = 1,
                     Title = "Meeting Notes",
                     Content = "Discuss project milestones, budget, and responsibilities.",
                     CreatedAt = new DateTime(2025, 10, 25),
@@ -33,7 +32,6 @@ internal class NotesSeeder(OrganiteDBContext dbContext) : INotesSeeder
                 },
                 new Note
                 {
-                    Id = 2,
                     Title = "Grocery List",
                     Content = "Milk, Bread, Eggs, Coffee, Apples.",
                     CreatedAt = new DateTime(2025, 10, 28),
@@ -43,7 +41,6 @@ internal class NotesSeeder(OrganiteDBContext dbContext) : INotesSeeder
                 },
                 new Note
                 {
-                    Id = 3,
                     Title = "Learning Plan",
                     Content = "Finish React Native course and practice EF Core seeding.",
                     CreatedAt = new DateTime(2025, 10, 29),

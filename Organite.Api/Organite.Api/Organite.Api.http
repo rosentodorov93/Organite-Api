@@ -1,6 +1,11 @@
-@Organite.Api_HostAddress = http://localhost:5255
+@Organite.Api_HostAddress = https://localhost:7160
 
 GET {{Organite.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{Organite.Api_HostAddress}}/api/notes
+
+###
+GET {{Organite.Api_HostAddress}}/api/notes/123
