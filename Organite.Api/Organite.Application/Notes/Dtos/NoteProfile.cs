@@ -7,6 +7,11 @@ public class NoteProfile : Profile
 {
     public NoteProfile()
     {
+        CreateMap<CreateNoteDto, Note>()
+            .ForMember(n => n.CreatedAt, opt => opt.MapFrom(_=> DateTime.Now))
+            .ForMember(n => n.UpdatedAt, opt => opt.MapFrom(_=> DateTime.Now))
+            .ForMember(n => n.IsPinned, opt => opt.MapFrom(_ => false));
+
         CreateMap<Note, NoteDto>();
     }
 }

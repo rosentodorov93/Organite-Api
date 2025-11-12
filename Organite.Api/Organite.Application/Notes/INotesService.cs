@@ -1,5 +1,4 @@
 ﻿using Organite.Application.Notes.Dtos;
-using Organite.Domain.Entities;
 
 namespace Organite.Application.Notes
 {
@@ -7,5 +6,6 @@ namespace Organite.Application.Notes
     {
         Task<IEnumerable<NoteDto>> GetAllNotes();
         Task<NoteDto?> GetById(int id);
+        Task<int> Create(CreateNoteDto noteDto);
     }
 }

@@ -9,3 +9,15 @@ GET {{Organite.Api_HostAddress}}/api/notes
 
 ###
 GET {{Organite.Api_HostAddress}}/api/notes/1
+
+###
+POST {{Organite.Api_HostAddress}}/api/notes
+Content-type: application/json
+
+{
+  "Title": "Read Atomic Habits",
+  "Content": "Improve habbits and become more productive",
+  "Tags": [
+      "Self-Improve"
+    ]
+}

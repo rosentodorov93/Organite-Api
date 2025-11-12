@@ -7,6 +7,13 @@ namespace Organite.Infrastructure.Repositories
 {
     internal class NotesRepository(OrganiteDBContext dbContext) : INotesRepository
     {
+        public async Task<int> Create(Note note)
+        {
+            dbContext.Notes.Add(note);
+            await dbContext.SaveChangesAsync();
+            return note.Id;
+        }
+
         public async Task<IEnumerable<Note>> GetAllAsync()
         {
             var notes = await dbContext.Notes.ToListAsync();
