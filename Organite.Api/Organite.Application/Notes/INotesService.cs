@@ -1,10 +1,11 @@
-﻿using Organite.Domain.Entities;
+﻿using Organite.Application.Notes.Dtos;
+using Organite.Domain.Entities;
 
 namespace Organite.Application.Notes
 {
     public interface INotesService
     {
-        Task<IEnumerable<Note>> GetAllNotes();
-        Task<Note?> GetById(int id);
+        Task<IEnumerable<NoteDto>> GetAllNotes();
+        Task<NoteDto?> GetById(int id);
     }
 }
