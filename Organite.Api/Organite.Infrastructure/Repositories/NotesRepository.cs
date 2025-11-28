@@ -14,6 +14,12 @@ namespace Organite.Infrastructure.Repositories
             return note.Id;
         }
 
+        public async Task Delete(Note note)
+        {
+            dbContext.Remove(note);
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<Note>> GetAllAsync()
         {
             var notes = await dbContext.Notes.ToListAsync();
@@ -24,6 +30,11 @@ namespace Organite.Infrastructure.Repositories
         {
             var note = await dbContext.Notes.FirstOrDefaultAsync(x => x.Id == id);
             return note;
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await dbContext.SaveChangesAsync();
         }
     }
 }

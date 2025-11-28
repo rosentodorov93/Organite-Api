@@ -21,3 +21,19 @@ Content-type: application/json
       "Self-Improve"
     ]
 }
+
+###
+DELETE {{Organite.Api_HostAddress}}/api/notes/1002
+
+###
+PATCH {{Organite.Api_HostAddress}}/api/notes/1003
+Content-type: application/json
+
+{
+  "Title": "Read Atomic Habits Edit",
+  "Content": "Improve habbits and become more productive Edit",
+  "Tags": [
+      "Self-Improve",
+      "Edit"
+    ]
+}
